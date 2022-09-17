@@ -1,0 +1,291 @@
+* {
+      box-sizing: border-box;
+}
+body {
+      font-family: "Epilogue", sans-serif;
+      background-color: hsl(0, 0%, 98%);
+      overflow-x: hidden;
+}
+.attribution { 
+      font-size: 11px; text-align: center; 
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+}
+.attribution a { 
+      color: hsl(228, 45%, 44%); 
+}
+
+/* navigation bar */
+
+nav {
+      display: flex;
+      margin: 15px;
+      width: 100%;
+      z-index: -1;
+}
+nav a {
+      text-decoration: none;
+      display: inline-block;
+      color: hsl(0, 0%, 41%);
+      padding: 10px;
+}
+.menu {
+      margin-left: 30px;
+}
+.menu a:hover {
+      color: black;
+      font-weight: 700;
+}
+.login {
+      justify-content: flex-end;
+      margin-left: auto;
+      margin-right: 30px;
+}
+
+.register {
+      border: 2px solid hsl(0, 0%, 41%);
+      border-radius: 18px;
+}
+.register:hover {
+      background-color: hsl(0, 0%, 41%);
+      color: hsl(0, 0%, 98%);
+}
+
+/* Dropdowns */
+
+.dropdown {
+      display: inline-flex;
+}
+.dropdown-content {
+      display: none;
+      padding: 10px;
+      position: absolute;
+      top: 50px;
+      background-color: white;
+      min-width: 140px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      z-index: 1;
+}
+.dropdown-content span {
+      padding-left: 10px;
+}
+.dropdown:hover .dropdown-content {
+      display: flex;
+      flex-direction: column;
+}
+#down, #down1, #down-side, #down-side1 {
+      display: inline-flex;
+}
+#up, #up1, #up-side, #up-side1 {
+      display: none;
+}
+
+/* main section */
+
+.container {
+      display: flex;
+      width: 90%;
+      margin: auto;
+      margin-top: 2%;
+      align-items: center;
+}
+.text {
+      width: 70%;
+      margin-left: 70px;
+      margin-top: -80px;
+}
+.text h1 {
+      font-size: 90px;
+      font-weight: 700;
+}
+.text p {
+      color: hsl(0, 0%, 41%);
+      margin-top: -30px;
+      font-size: 18px;
+      line-height: 25px;
+}
+.text button {
+      background-color: hsl(0, 0%, 8%);
+      color: hsl(0, 0%, 98%);
+      border: 2px solid hsl(0, 0%, 8%);
+      border-radius: 14px;
+      padding: 15px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+}
+.text button:hover {
+      background-color: hsl(0, 0%, 98%);
+      color: hsl(0, 0%, 8%);
+}
+.img {
+      width: 40%;
+}
+.img img {
+      width: 100%;
+      height: 570px;
+}
+.svgs {
+      position: relative;
+      top: 78px;
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+}
+
+/* for mobile view */
+
+#menu-icon {
+      display: none;
+      justify-content: flex-end;
+      margin-left: auto;
+      margin-right: 20px;
+      cursor: pointer;
+}
+.side-bar {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100vh;
+      background-color: white;
+      z-index: 1;
+      padding: 50px 30px;
+}
+.menu-close {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 10px;
+      cursor: pointer;
+}
+.menu-side {
+      margin-top: 30px;
+}
+.menu-side a, .menu-side button{
+      text-decoration: none;
+      display: block;
+      color: hsl(0, 0%, 41%);
+      padding: 0 0 15px 0;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      width: 100%;
+      background: none;
+      text-align: left;
+      cursor: pointer;
+}
+.menu-side a:hover {
+      color: black;
+      font-weight: 700;
+}
+.menu-side button:hover {
+      color: black;
+      font-weight: 700;
+}
+.log:hover {
+      color: black;
+      font-weight: 700;
+}
+
+#features, #company {
+      display: none;
+      position: relative;
+      margin-left: 30px;
+      padding: -10px;
+}
+.dropdown-content-click span {
+      padding-left: 10px;
+}
+.login-side {
+      text-align: center;
+      margin-top: 40px;
+}
+.login-side a {
+      text-decoration: none;
+      display: inline-block;
+      color: hsl(0, 0%, 41%);
+      padding: 10px;
+}
+.register-side {
+      border: 2px solid hsl(0, 0%, 41%);
+      border-radius: 12px;
+      padding: 10px;
+      width: 95%;
+}
+.register-side:hover {
+      background-color: hsl(0, 0%, 41%);
+      color: hsl(0, 0%, 98%);
+}
+
+
+.img-sm {
+      display: none;
+      position: relative;
+      width: 100%;
+      height: 30%;
+      max-height: 300px;
+}
+
+.img-sm img {
+      width: 100%;
+      height: 180px;
+}
+
+@media (max-width: 662px) {
+      .menu, .login {
+            display: none;
+      }
+      #menu-icon {
+            display: inline-flex;
+      }
+      .img {
+            display: none;
+      }
+      .img-sm {
+            display: block;
+      }
+      .container {
+            display: block;
+            width: 100%;
+      }
+      .text {
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 23%;
+            margin-left: 0;
+      }
+      .text h1 {
+            font-size: 36px;
+            font-weight: 700;
+      }
+      h1 br {
+            display: none;
+      }
+      .text p {
+            margin-top: -5px;
+      }
+      .svgs {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+      }
+}
+
+
+
+@media (max-width: 992px) {
+      .svgs {
+            width: 80%;
+      }
+}
+@media (max-width: 1200px) {
+      .svgs {
+            width: 80%;
+      }
+}
