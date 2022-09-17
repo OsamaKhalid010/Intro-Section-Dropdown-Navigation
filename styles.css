@@ -271,21 +271,10 @@ nav a {
             margin-top: -5px;
       }
       .svgs {
-            display: flex;
-            width: 100%;
+            width: 97%;
             justify-content: space-between;
+            overflow: hidden;
       }
 }
 
 
-
-@media (max-width: 992px) {
-      .svgs {
-            width: 80%;
-      }
-}
-@media (max-width: 1200px) {
-      .svgs {
-            width: 80%;
-      }
-}
